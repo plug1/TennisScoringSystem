@@ -13,6 +13,11 @@ public class Controller {
     private boolean tieBreak = false;
 
     public void scorePonint(char player) {
+        
+        
+        if (playerA.getSets()==3 || playerB.getSets() ==3){
+            return;//end of match
+        }
 
         if (player == 'A') {
             playerA.setPoints(+1);
@@ -105,7 +110,8 @@ public class Controller {
         playerA.setGames(0);
         playerB.setGames(0);
 
-        tieBreak = false;
+        tieBreak = false;       
+        
     }
 
     private int getCurrentSet() {

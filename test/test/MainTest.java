@@ -189,5 +189,15 @@ public class MainTest {
         main.playerAWonPoint();
         // Then
         assertEquals("3/2 0/0 0/0", main.currentScore());
+        
+         // Phase 6: End match Test
+        // When
+        main.playerAWonPoint();
+        // Then
+        assertEquals("3/2 0/0 0/0", main.currentScore());
+        // When
+        main.playerBWonPoint();
+        // Then
+        assertEquals("3/2 0/0 0/0", main.currentScore());
     }
 }
